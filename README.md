@@ -2,8 +2,10 @@
 
 ## Group Information
 
-- **Student:** A.M.K.D.Adhikari - ITBIN-2211-0137
-- **Role:** Full-Stack Developer / DevOps Engineer
+- **Student 1:** A.M.K.D. Adhikari — ITBIN-2211-0137
+  **Role:** Full-Stack Developer
+- **Student 2:** Lakshan Thenuka — ITBIN-2211-0304
+  **Role:** DevOps Engineer
 
 ## Project Description
 
@@ -15,7 +17,7 @@ This project also demonstrates professional Git workflows, automated testing, Co
 
 ## Live Deployment
 
-🔗 **Live URL:** https://keshan-d-adhikari.github.io/todo-devops-assignment/
+**Live URL:** https://keshan-d-adhikari.github.io/taskflow-devops-team/
 
 ## Technologies Used
 
@@ -49,19 +51,16 @@ This project also demonstrates professional Git workflows, automated testing, Co
 This project follows a Git Flow style branching strategy.
 
 - `main` - Production-ready branch and deployment source
-- `develop` - Integration and testing branch
-- `feature/task-management` - Task management functionality
-- `feature/testing` - Automated tests and build configuration
-- `feature/devops` - CI/CD workflows and documentation
+- `feature/frontend-tasks` - Frontend task-management functionality
+- `feature/devops-cicd` - CI/CD, tests, build, and deployment configuration
+- `docs/team-documentation` - Team documentation updates
 
-Feature branches are integrated into `develop` through Pull Requests. After testing and verification, `develop` is merged into `main` through a release Pull Request.
+Feature branches are reviewed through Pull Requests and merged into `main` after CI checks pass.
 
 ## Individual Contribution
 
-### A.M.K.D.Adhikari
+### A.M.K.D. Adhikari — Full-Stack Developer
 
-- Created and configured the GitHub repository
-- Created the project structure
 - Developed the Todo application interface
 - Added responsive CSS styling
 - Implemented task creation and deletion
@@ -69,15 +68,17 @@ Feature branches are integrated into `develop` through Pull Requests. After test
 - Implemented task filtering
 - Implemented task counter functionality
 - Implemented Local Storage persistence
-- Added automated tests
-- Configured ESLint
-- Added the production build process
-- Configured the GitHub Actions CI pipeline
-- Configured the GitHub Pages deployment workflow
-- Managed feature branches and Pull Requests
-- Configured GitHub Pages deployment
-- Tested the deployed application
-- Created and maintained project documentation
+- Created the `feature/frontend-tasks` branch and frontend Pull Request
+- Reviewed the DevOps Pull Request and maintained project documentation
+
+### Lakshan Thenuka — DevOps Engineer
+
+- Configured GitHub Actions CI workflow
+- Configured GitHub Pages deployment workflow
+- Added ESLint configuration, automated tests, and the production build process
+- Added `.gitignore`, package configuration, and dependency lock file
+- Created the `feature/devops-cicd` branch and DevOps Pull Request
+- Reviewed the frontend Pull Request and monitored CI/CD checks
 
 ## Setup & Installation Instructions
 
@@ -91,13 +92,13 @@ Before running the project locally, install:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/Keshan-D-Adhikari/todo-devops-assignment.git
+git clone https://github.com/Keshan-D-Adhikari/taskflow-devops-team.git
 ```
 
 Navigate into the project directory:
 
 ```bash
-cd todo-devops-assignment
+cd taskflow-devops-team
 ```
 
 ### Install Dependencies
@@ -212,43 +213,17 @@ ci: add GitHub Pages deployment workflow
 docs: add project documentation
 ```
 
-Pull Requests were used to integrate feature branches into `develop`, followed by a final Pull Request from `develop` into `main`.
+Pull Requests were used to review and integrate feature branches into `main`.
 
-## Challenges & Resolutions
+## Deployment Note
 
-### GitHub Pages Deployment Configuration
-
-During the initial GitHub Pages deployment, the workflow could not access the Pages environment because GitHub Pages had not yet been enabled for GitHub Actions.
-
-This was resolved by configuring GitHub Pages to use GitHub Actions as the deployment source.
-
-### GitHub Pages Environment Protection
-
-A deployment attempt was also blocked because the `main` branch was not initially permitted by the `github-pages` environment deployment rules.
-
-The `main` branch was added to the allowed deployment branches under the GitHub environment settings. The deployment workflow was then re-run successfully.
-
-### Default Branch Configuration
-
-The repository initially had a feature branch configured as its default branch.
-
-This was corrected by changing the repository default branch to `main`, ensuring that the production-ready branch is the primary repository branch.
-
-### Merge Conflict Demonstration
-
-A merge conflict was intentionally created in `README.md` by making different changes on the `main` and `feature/conflict-demo` branches.
-
-Git detected the content conflict during the merge process. The conflict was reviewed and resolved, the corrected file was staged, and the resolution was committed using:
-
-`fix: resolve README merge conflict`
-
-The completed conflict-resolution changes were submitted through Pull Request #5 and successfully merged into the `develop` branch.
+GitHub Pages is configured to deploy through GitHub Actions. The deployment workflow builds the application from `src/`, publishes the generated `dist/` folder, and runs whenever changes are merged into `main`.
 
 ## Build Status
 
-![CI Pipeline](https://github.com/Keshan-D-Adhikari/todo-devops-assignment/actions/workflows/ci.yml/badge.svg)
+![CI Pipeline](https://github.com/Keshan-D-Adhikari/taskflow-devops-team/actions/workflows/ci.yml/badge.svg)
 
-![Deploy to GitHub Pages](https://github.com/Keshan-D-Adhikari/todo-devops-assignment/actions/workflows/deploy.yml/badge.svg)
+![Deploy to GitHub Pages](https://github.com/Keshan-D-Adhikari/taskflow-devops-team/actions/workflows/deploy.yml/badge.svg)
 
 ## Deployment Verification
 
@@ -267,7 +242,7 @@ The deployed application has been tested to confirm:
 ## Repository Structure
 
 ```text
-todo-devops-assignment/
+taskflow-devops-team/
 ├── .github/
 │   └── workflows/
 │       ├── ci.yml
@@ -293,4 +268,3 @@ todo-devops-assignment/
 
 This project was created for educational purposes as part of the Advanced Git & DevOps Team Collaboration Assignment.
 
-# taskflow-devops-team
