@@ -1,0 +1,14 @@
+{
+  "name": "taskflow-todo-app",
+  "version": "1.0.0",
+  "description": "Responsive Todo List application for Advanced Git and DevOps assignment",
+  "private": true,
+  "scripts": {
+    "lint": "eslint src/scripts/app.js",
+    "build": "node scripts/build.js",
+    "test": "node --test tests/app.test.js"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0"
+  }
+}
